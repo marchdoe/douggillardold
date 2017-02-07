@@ -1,0 +1,19 @@
+---
+title: Doug Gillard
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: Something Here
+owner: Doug Gillard
+first_published: 2017
+email: dougmarch+douggillard@gmail.com
+baseurl: ''
+url: http://douggillard.com
+social:
+  twitter: https://twitter.com/douggillard
+markdown: kramdown
