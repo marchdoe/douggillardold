@@ -17,7 +17,8 @@ class Home extends Component {
     return (
       <Wrapper>
         <StyledHeading py={3} f={4} is={'h2'}>
-          <Link to={'about'}>I make websites</Link>
+          I make websites
+          {/* <Link to={'about'}>I make websites</Link> */}
         </StyledHeading>
         <StyledHeading py={3} f={4} is={'h2'}>
           <Link to={'posts'}>find stuff</Link>
@@ -25,8 +26,6 @@ class Home extends Component {
         <StyledHeading py={3} f={4} is={'h2'}>
           <Link to={'projects'}>create things</Link>
         </StyledHeading>
-        {/* <h2>make food,</h2>
-        <h2>&amp; play golf.</h2> */}
       </Wrapper>
     )
   }

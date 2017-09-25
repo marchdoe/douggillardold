@@ -27,6 +27,7 @@ class Posts extends Component {
 
   renderPosts () {
     return this.props.posts.map((post, index) => {
+      console.log(post.sys.space)
       return (
         <StyledArticle pr={4} py={3} key={post.sys.id}>
           <StyledHeading pb={2} f={4} is={'h2'}>
@@ -41,6 +42,7 @@ class Posts extends Component {
   }
 
   render () {
+
     return (
       <Wrapper p={3}>
         {this.renderPosts()}

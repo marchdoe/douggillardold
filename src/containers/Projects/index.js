@@ -34,7 +34,7 @@ class Projects extends Component {
               {project.fields.title}
             </Link>
             <Link pl={3} color={'gray'} href={project.fields.source}>
-              <small>[s]</small>
+              {project.fields.sourceName}
             </Link>
           </StyledHeading>
         </StyledArticle>

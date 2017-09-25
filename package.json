@@ -1,18 +1,24 @@
 {
-  "name": "resume",
-  "version": "0.1.0",
-  "private": true,
+  "name": "doug-march",
+  "homepage": "https://marchdoe.github.io/doug-march.com",
+  "version": "0.2.0",
+  "author": "Doug March",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marchdoe/doug-march.com.git"
+  },
   "devDependencies": {
-    "react-scripts": "1.0.12",
     "@storybook/addon-actions": "^3.2.6",
-    "@storybook/addon-links": "^3.2.6",
     "@storybook/addon-info": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
     "@storybook/addon-options": "^3.2.6",
     "@storybook/addon-storyshots": "^3.2.6",
-    "@storybook/react": "^3.2.6"
+    "@storybook/react": "^3.2.6",
+    "react-scripts": "1.0.12"
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -24,6 +30,8 @@
     "styled-components": "^2.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
