@@ -4,6 +4,7 @@ import { config } from '../config'
 
 export const FETCH_POSTS = 'FETCH_POSTS'
 export const FETCH_PROJECTS = 'FETCH_PROJECTS'
+export const FETCH_POSITIONS = 'FETCH_POSITIONS'
 
 const API_BASE_URL = config.API_BASE_URL
 const API_SPACE_ID = config.API_SPACE_ID
@@ -21,6 +22,14 @@ export function fetchProjects () {
   const request = axios.get(`${API_BASE_URL}/spaces/${API_SPACE_ID}/entries?access_token=${API_TOKEN}&content_type=projects`)
   return {
     type: FETCH_PROJECTS,
+    payload: request
+  }
+}
+
+export function fetchPositions () {
+  const request = axios.get(`${API_BASE_URL}/spaces/${API_SPACE_ID}/entries?access_token=${API_TOKEN}&content_type=positions`)
+  return {
+    type: FETCH_POSITIONS,
     payload: request
   }
 }

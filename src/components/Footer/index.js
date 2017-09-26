@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+import { color } from '../../theme'
+
 const StyledFooter = styled.footer`
   font-size: 11px;
   text-align: center;
-  border-top: 2px solid #e1e1e1;
-  color: #aaa;
+  border-top: 1px solid ${color.gray1};
+  background-color: ${color.gray0};
+  color: ${color.gray5};
   text-transform: uppercase;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -13,7 +16,7 @@ const StyledFooter = styled.footer`
   span {
     margin-right: .6rem;
     font-weight: bold;
-    color: #888;
+    color: ${color.gray7};
   }
 `
 

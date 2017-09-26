@@ -2,7 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { fetchPosts } from '../../actions/index'
-import { Box, Heading, Link, Text } from 'rebass'
+
+import {
+  Box,
+  Heading,
+  Link,
+  Text } from 'rebass'
+
+import { color } from '../../theme'
 
 const Wrapper = styled(Box)`
   margin-left: auto;
@@ -11,7 +18,7 @@ const Wrapper = styled(Box)`
 `
 
 const StyledArticle = styled(Box)`
-  border-bottom: 2px dotted #e1e1e1;
+  border-bottom: 2px dotted ${color.gray1};
 
   &:last-child { border: 0; }
 `
@@ -27,15 +34,14 @@ class Posts extends Component {
 
   renderPosts () {
     return this.props.posts.map((post, index) => {
-      console.log(post.sys.space)
       return (
-        <StyledArticle pr={4} py={3} key={post.sys.id}>
-          <StyledHeading pb={2} f={4} is={'h2'}>
+        <StyledArticle pr={5} py={4} key={post.sys.id}>
+          <StyledHeading f={4} is={'h2'}>
             <Link href={post.fields.source}>
               {post.fields.title}
             </Link>
           </StyledHeading>
-          <Text f={2}>{post.fields.excerpt}</Text>
+          <Text pt={2} f={2}>{post.fields.excerpt}</Text>
         </StyledArticle>
       )
     })

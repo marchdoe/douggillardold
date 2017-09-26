@@ -3,9 +3,11 @@ import styled from 'styled-components'
 
 import Logo from '../Logo'
 
+import { color } from '../../theme'
+
 const StyledHeader = styled.header`
-  background-color: #fff;
-  border-bottom: 5px solid #e1e1e1;
+  background-color: ${color.white};
+  border-bottom: 8px solid ${color.gray2};
   text-align: center;
   min-height: 100px;
   padding-top: 10px;

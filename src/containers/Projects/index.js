@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { fetchProjects } from '../../actions/index'
-import { Box, Heading, Link } from 'rebass'
+
+import {
+  Box,
+  Heading,
+  Link } from 'rebass'
+
+import { color } from '../../theme'
 
 const Wrapper = styled(Box)`
   margin-left: auto;
@@ -17,7 +23,7 @@ const StyledArticle = styled(Box)`
 `
 
 const StyledHeading = styled(Heading)`
-  color: #666;
+  color: ${color.gray7};
 `
 
 class Projects extends Component {
@@ -42,10 +48,26 @@ class Projects extends Component {
     })
   }
 
+  renderCompaniesWorkedWith () {
+    return (
+      <StyledArticle pr={4} py={3}>
+        <StyledHeading pb={2} f={4} is={'h2'}>
+          <span>logo 1</span>
+          <span>logo 2</span>
+          <span>logo 3</span>
+          <span>logo 4</span>
+          <span>logo 5</span>
+        </StyledHeading>
+      </StyledArticle>
+    )
+  }
+
   render () {
     return (
       <Wrapper p={3}>
         {this.renderProjects()}
+        {/* <Divider w={1} color='blue' /> */}
+        {this.renderCompaniesWorkedWith()}
       </Wrapper>
     )
   }
