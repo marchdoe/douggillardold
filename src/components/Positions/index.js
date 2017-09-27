@@ -7,21 +7,22 @@ import {
   Box,
   Flex,
   Heading,
-  Text } from 'rebass'
+  Small } from 'rebass'
 
 import { color } from '../../theme'
 
-const Position = styled(Flex)``
+const StyledHeading = styled(Heading)`
+  border-bottom: 1px solid ${color.gray1};
+`
 
 const StyledBox = styled(Box)`
-
   ul {
-    margin-bottom: 0;
+    margin: 0;
     list-style: none;
     padding-left: 1.0em;
 
     li {
-      margin: .5rem 0;
+      margin: 0 0 1rem 0;
     }
 
     li:before {
@@ -47,20 +48,21 @@ class Positions extends Component {
   renderPositions () {
     return this.props.positions.map((position, index) => {
       return (
-        <Position wrap pb={4} mb={4} key={position.sys.id}>
-          <Box width={[1, 1 / 3, 1 / 4]}>
-            <Heading f={3} is='h2'>{position.fields.company}</Heading>
-            <Text mb={3} f={0}><i>{position.fields.date}</i></Text>
+        <Flex wrap pb={3} mb={3} key={position.sys.id}>
+          <StyledHeading is='h2' w={1} pb={3} mb={3} f={3}>
+            {position.fields.company}
+            <Small ml={3} f={1}>{position.fields.date}</Small>
+          </StyledHeading>
+
+          <Box mb={4} width={[1, 1 / 3, 1 / 4]}>
             <Heading f={2} is='h3'>{position.fields.title}</Heading>
           </Box>
 
           <StyledBox
-            pl={4}
-            mt={1}
             width={[1, 2 / 3, 3 / 4]}
             dangerouslySetInnerHTML={this.renderMarkdown(position.fields.description)}
           />
-        </Position>
+        </Flex>
       )
     })
   }
