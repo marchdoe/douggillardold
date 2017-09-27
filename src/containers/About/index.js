@@ -57,30 +57,30 @@ class About extends Component {
 
           <Heading mb={3} f={1} is='h4' color={color.green} caps>Skills</Heading>
           <Flex mb={3} wrap>
-            <Box w={[1, 1 / 3 ]} mb={4} pr={4}>
+            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
               <Text f={2}>HTML</Text>
-              <Progress color={'#0088cc'} value={9/10} />
+              <Progress color={'#0088cc'} value={9 / 10} />
             </Box>
-            <Box w={[1, 1 / 3 ]} mb={4} pr={4}>
+            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
               <Text f={2}>CSS</Text>
-              <Progress color={'#0088cc'} value={9/10} />
+              <Progress color={'#0088cc'} value={9 / 10} />
             </Box>
-            <Box w={[1, 1 / 3 ]} mb={4} pr={4}>
+            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
               <Text f={2}>Javascript</Text>
-              <Progress color={'#0088cc'} value={4/10} />
+              <Progress color={'#0088cc'} value={4 / 10} />
             </Box>
 
-            <Box w={[1, 1 / 3 ]} mb={4} pr={4}>
+            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
               <Text f={2}>HTML</Text>
-              <Progress color={'#0088cc'} value={9/10} />
+              <Progress color={'#0088cc'} value={9 / 10} />
             </Box>
-            <Box w={[1, 1 / 3 ]} mb={4} pr={4}>
+            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
               <Text f={2}>CSS</Text>
-              <Progress color={'#0088cc'} value={9/10} />
+              <Progress color={'#0088cc'} value={9 / 10} />
             </Box>
-            <Box w={[1, 1 / 3 ]} mb={4} pr={4}>
+            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
               <Text f={2}>Javascript</Text>
-              <Progress color={'#0088cc'} value={4/10} />
+              <Progress color={'#0088cc'} value={4 / 10} />
             </Box>
           </Flex>
 

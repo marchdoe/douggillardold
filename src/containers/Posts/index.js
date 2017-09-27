@@ -48,7 +48,6 @@ class Posts extends Component {
   }
 
   render () {
-
     return (
       <Wrapper p={3}>
         {this.renderPosts()}

@@ -3,7 +3,7 @@ export const border = {
 }
 
 export const color = {
-  blue:  '#0088cc',
+  blue: '#0088cc',
   green: '#77c241',
   white: '#ffffff',
   gray0: '#f8f9f9',

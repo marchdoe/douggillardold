@@ -34,12 +34,11 @@ const StyledBox = styled(Box)`
 `
 
 class Positions extends Component {
-
   componentWillMount () {
     this.props.fetchPositions()
   }
 
-  renderMarkdown(content) {
+  renderMarkdown (content) {
     return {
       __html: marked(content, {sanitize: true})
     }
@@ -68,7 +67,6 @@ class Positions extends Component {
   }
 
   render () {
-
     return (
       <div>
         {this.renderPositions()}
