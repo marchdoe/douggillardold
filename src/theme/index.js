@@ -1,5 +1,6 @@
 export const border = {
-  radius: '2px'
+  radius: '3px',
+  largeRadius: '10px'
 }
 
 export const color = {

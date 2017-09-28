@@ -8,21 +8,27 @@ import {
   Small,
   Text } from 'rebass'
 
-import { color } from '../../theme'
+import { color, border } from '../../theme'
 
 import Positions from '../../components/Positions'
 
+const Wrapper = styled(Flex)`
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+`
+
 const Content = styled(Box)``
 
-const Intro = styled(Text)`
-  line-height: 1.6;
-  font-weight: 700;
+const StyledSkills = styled(Box)`
+  background-color: ${color.white};
+  border-radius: ${border.largeRadius};
 `
 
 class About extends Component {
   render () {
     return (
-      <Flex wrap>
+      <Wrapper wrap>
 
         {/* <Aside w={[ 1, 1, 1 / 3  ]} p={3}>
           <Heading color={color.blue} f={5} mb={4} is='h1'>Doug March</Heading>
@@ -47,42 +53,44 @@ class About extends Component {
 
         <Content w={[ 1 ]} p={3}>
 
-          <Intro f={[4, 5]} mb={4}>
+          <Text f={[4, 5]} mb={4}>
             Need a good quality intro here
-          </Intro>
+          </Text>
 
           <Heading mb={3} f={1} is='h4' color={color.green} caps>Experience</Heading>
 
           <Positions />
 
-          <Heading mb={3} f={1} is='h4' color={color.green} caps>Skills</Heading>
-          <Flex mb={3} wrap>
-            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
-              <Text f={2}>HTML</Text>
-              <Progress color={'#0088cc'} value={9 / 10} />
-            </Box>
-            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
-              <Text f={2}>CSS</Text>
-              <Progress color={'#0088cc'} value={9 / 10} />
-            </Box>
-            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
-              <Text f={2}>Javascript</Text>
-              <Progress color={'#0088cc'} value={4 / 10} />
-            </Box>
+          <StyledSkills py={1} mb={4}>
+            <Heading pt={3} px={3} mb={1} f={1} is='h4' color={color.green} caps>Skills</Heading>
+            <Flex mb={3} wrap>
+              <Box w={[ 1, 1 / 3 ]} px={3} mt={3} mb={3}>
+                <Text f={2}>HTML</Text>
+                <Progress color={'#0088cc'} value={9 / 10} />
+              </Box>
+              <Box w={[ 1, 1 / 3 ]} px={3} mt={3} mb={3}>
+                <Text f={2}>CSS</Text>
+                <Progress color={'#0088cc'} value={9 / 10} />
+              </Box>
+              <Box w={[ 1, 1 / 3 ]} px={3} mt={3} mb={3}>
+                <Text f={2}>Javascript</Text>
+                <Progress color={'#0088cc'} value={4 / 10} />
+              </Box>
 
-            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
-              <Text f={2}>HTML</Text>
-              <Progress color={'#0088cc'} value={9 / 10} />
-            </Box>
-            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
-              <Text f={2}>CSS</Text>
-              <Progress color={'#0088cc'} value={9 / 10} />
-            </Box>
-            <Box w={[ 1, 1 / 3 ]} mb={4} pr={4}>
-              <Text f={2}>Javascript</Text>
-              <Progress color={'#0088cc'} value={4 / 10} />
-            </Box>
-          </Flex>
+              <Box w={[ 1, 1 / 3 ]} px={3} mt={3} mb={3}>
+                <Text f={2}>HTML</Text>
+                <Progress color={'#0088cc'} value={9 / 10} />
+              </Box>
+              <Box w={[ 1, 1 / 3 ]} px={3} mt={3} mb={3}>
+                <Text f={2}>CSS</Text>
+                <Progress color={'#0088cc'} value={9 / 10} />
+              </Box>
+              <Box w={[ 1, 1 / 3 ]} px={3} mt={3} mb={3}>
+                <Text f={2}>Javascript</Text>
+                <Progress color={'#0088cc'} value={4 / 10} />
+              </Box>
+            </Flex>
+          </StyledSkills>
 
           <Heading mb={3} f={1} is='h4' color={color.green} caps>Education</Heading>
 
@@ -99,7 +107,7 @@ class About extends Component {
           </Flex>
 
         </Content>
-      </Flex>
+      </Wrapper>
     )
   }
 }

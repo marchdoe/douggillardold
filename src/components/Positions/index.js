@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import marked from 'marked'
 import styled from 'styled-components'
 import { fetchPositions } from '../../actions/index'
+
 import {
   Box,
   Flex,
@@ -11,7 +12,18 @@ import {
 
 import { color } from '../../theme'
 
-const StyledHeading = styled(Heading)`
+const StyledTitle = styled(Heading)`
+  color: ${color.gray9};
+  font-weight: normal;
+`
+
+const StyledSecondaryTitle = styled(Small)`
+  color: ${color.gray7};
+  display: block;
+  font-weight: normal;
+`
+
+const StyledPositionTitle = styled(Heading)`
   border-bottom: 1px solid ${color.gray1};
 `
 
@@ -28,7 +40,7 @@ const StyledBox = styled(Box)`
     li:before {
       content: "•";
       margin: 0 .5em .1em -.85em;
-      color: ${color.gray2};
+      color: ${color.blue};
     }
   }
 `
@@ -48,13 +60,18 @@ class Positions extends Component {
     return this.props.positions.map((position, index) => {
       return (
         <Flex wrap pb={3} mb={3} key={position.sys.id}>
-          <StyledHeading is='h2' w={1} pb={3} mb={3} f={3}>
+          <StyledPositionTitle is='h2' w={1} pb={3} mb={3} f={3}>
             {position.fields.company}
             <Small ml={3} f={1}>{position.fields.date}</Small>
-          </StyledHeading>
+          </StyledPositionTitle>
 
           <Box mb={4} width={[1, 1 / 3, 1 / 4]}>
-            <Heading f={2} is='h3'>{position.fields.title}</Heading>
+            <StyledTitle f={2} is='h3'>
+              {position.fields.title}
+              <StyledSecondaryTitle>
+                {position.fields.secondaryTitle}
+              </StyledSecondaryTitle>
+            </StyledTitle>
           </Box>
 
           <StyledBox
