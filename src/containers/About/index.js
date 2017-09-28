@@ -57,10 +57,6 @@ class About extends Component {
             Need a good quality intro here
           </Text>
 
-          <Heading mb={3} f={1} is='h4' color={color.green} caps>Experience</Heading>
-
-          <Positions />
-
           <StyledSkills py={1} mb={4}>
             <Heading pt={3} px={3} mb={1} f={1} is='h4' color={color.green} caps>Skills</Heading>
             <Flex mb={3} wrap>
@@ -91,6 +87,9 @@ class About extends Component {
               </Box>
             </Flex>
           </StyledSkills>
+
+          <Heading mb={3} f={1} is='h4' color={color.green} caps>Experience</Heading>
+          <Positions />
 
           <Heading mb={3} f={1} is='h4' color={color.green} caps>Education</Heading>
 
