@@ -58,8 +58,6 @@ class Positions extends Component {
 
   renderPositions () {
     return this.props.positions.sort((a, b) => a.fields.order > b.fields.order).map((position, index) => {
-
-    // return this.props.positions.map((position, index) => {
       return (
         <Flex wrap mb={5} key={position.sys.id}>
           <StyledPositionTitle is='h2' w={1} pb={3} mb={3} f={3}>
