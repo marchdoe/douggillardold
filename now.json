@@ -1,4 +1,7 @@
 {
-  "name": "doug-march.com", 
-  "type": "docker"
+  "name": "doug-march.com",
+  "alias": [
+    "doug-march.com"
+  ],
+  "forwardNpm": true
 }
