@@ -1,7 +1,5 @@
 {
   "name": "doug-march.com",
-  "alias": [
-    "doug-march.com"
-  ],
-  "forwardNpm": true
+  "type": "docker",
+  "public": true
 }
