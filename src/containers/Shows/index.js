@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { fetchPosts } from '../../actions/index'
+import { fetchShows } from '../../actions/index'
 
 import {
   Box,
   Heading,
-  Link,
-  Text } from 'rebass'
+  Link } from 'rebass'
 
 import { color } from '../../theme'
 
@@ -27,21 +26,22 @@ const StyledHeading = styled(Heading)`
   color: #666;
 `
 
-class Posts extends Component {
+class Shows extends Component {
   componentWillMount () {
-    this.props.fetchPosts()
+    this.props.fetchShows()
   }
 
-  renderPosts () {
-    return this.props.posts.map((post, index) => {
+  renderShows () {
+    return this.props.shows.map((show, index) => {
+      console.log(show)
       return (
-        <StyledArticle pr={5} py={4} key={post.sys.id}>
+        <StyledArticle pr={5} py={4} key={show.sys.id}>
           <StyledHeading f={4} is={'h2'}>
-            <Link href={post.fields.source}>
-              {post.fields.title}
+            <Link href="#">
+              {show.fields.date} - {show.fields.location} ::  {show.fields.venue}
             </Link>
+            <p>{show.fields.additionalInfo}</p>
           </StyledHeading>
-          <Text pt={2} f={2}>{post.fields.excerpt}</Text>
         </StyledArticle>
       )
     })
@@ -50,14 +50,14 @@ class Posts extends Component {
   render () {
     return (
       <Wrapper p={3}>
-        {this.renderPosts()}
+        {this.renderShows()}
       </Wrapper>
     )
   }
 }
 
 function mapStateToProps (state) {
-  return { posts: state.posts.all }
+  return { shows: state.shows.all }
 }
 
-export default connect(mapStateToProps, { fetchPosts })(Posts)
+export default connect(mapStateToProps, { fetchShows })(Shows)

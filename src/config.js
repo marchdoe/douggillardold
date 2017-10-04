@@ -1,5 +1,5 @@
 export const config = {
   API_BASE_URL: 'https://cdn.contentful.com',
-  API_SPACE_ID: 'bbwpgjv1jd8l',
-  API_TOKEN: '1d368a3878504119f6a075082be5665196d98efadf78884bbb314d7fd350dfcc'
+  API_SPACE_ID: '1wl760ipaxh0',
+  API_TOKEN: 'f21bf4aa1a82faef27fe7daf58dbcb1391ffdedc705bc15bb81b6e7292ece7f8'
 }

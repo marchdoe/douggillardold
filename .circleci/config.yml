@@ -15,7 +15,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/doug-march.com
+    working_directory: ~/doug-gillard.com
 
     steps:
       - checkout
@@ -41,5 +41,5 @@ jobs:
           name: Maybe Deploy
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              now --public --docker -t ${NOW_TOKEN} && now -t ${NOW_TOKEN} alias dm
+              now --public --docker -t ${NOW_TOKEN} && now -t ${NOW_TOKEN} alias doug-gillard
             fi

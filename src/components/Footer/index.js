@@ -14,7 +14,6 @@ const StyledFooter = styled.footer`
   padding-bottom: 1rem;
 
   span {
-    margin-right: .6rem;
     font-weight: bold;
     color: ${color.gray7};
   }
@@ -24,7 +23,7 @@ class Footer extends Component {
   render () {
     return (
       <StyledFooter>
-        <span>doug march</span> design, development &amp; music intelligence
+        <span>doug Gillard</span>
       </StyledFooter>
     )
   }

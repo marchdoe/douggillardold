@@ -8,12 +8,6 @@
     "url": "https://github.com/marchdoe/doug-march.com.git"
   },
   "dependencies": {
-    "@storybook/addon-actions": "^3.2.6",
-    "@storybook/addon-info": "^3.2.6",
-    "@storybook/addon-links": "^3.2.6",
-    "@storybook/addon-options": "^3.2.6",
-    "@storybook/addon-storyshots": "^3.2.6",
-    "@storybook/react": "^3.2.6",
     "axios": "^0.16.2",
     "polished": "^1.7.0",
     "react": "^16.0.0",
@@ -32,8 +26,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "eject": "react-scripts eject"
   }
 }
