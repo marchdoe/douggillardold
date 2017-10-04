@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { fetchShows } from '../../actions/index'
+import { fetchDiscography } from '../../actions/index'
 
 import {
   Box,
   Heading,
-  Link } from 'rebass'
+  Link,
+  Small } from 'rebass'
 
 import { color } from '../../theme'
 
@@ -26,20 +27,21 @@ const StyledHeading = styled(Heading)`
   color: #666;
 `
 
-class Shows extends Component {
+class Discography extends Component {
   componentWillMount () {
-    this.props.fetchShows()
+    this.props.fetchDiscography()
   }
 
-  renderShows () {
-    return this.props.shows.map((show, index) => {
+  renderDiscography () {
+    return this.props.discography.map((album, index) => {
+      console.log(album)
       return (
-        <StyledArticle pr={5} py={4} key={show.sys.id}>
+        <StyledArticle pr={5} py={4} key={album.sys.id}>
           <StyledHeading f={4} is={'h2'}>
             <Link href="#">
-              {show.fields.date} - {show.fields.location} ::  {show.fields.venue}
+              {album.fields.title} - {album.fields.artist} ::  <Small>{album.fields.date}</Small>
             </Link>
-            <p>{show.fields.additionalInfo}</p>
+            <p>{album.fields.description}</p>
           </StyledHeading>
         </StyledArticle>
       )
@@ -49,14 +51,14 @@ class Shows extends Component {
   render () {
     return (
       <Wrapper p={3}>
-        {this.renderShows()}
+        {this.renderDiscography()}
       </Wrapper>
     )
   }
 }
 
 function mapStateToProps (state) {
-  return { shows: state.shows.all }
+  return { discography: state.discography.all }
 }
 
-export default connect(mapStateToProps, { fetchShows })(Shows)
+export default connect(mapStateToProps, { fetchDiscography })(Discography)

@@ -11,8 +11,8 @@ const StyledHeader = styled(Flex)`
 `
 
 const StyledLink = styled(Link)`
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `
 
 class Header extends Component {
@@ -24,8 +24,7 @@ class Header extends Component {
         </Box>
         <Box pr={3} py={4} ml='auto'>
           <StyledLink to={'shows'}>Upcoming Shows</StyledLink>
-          <StyledLink to={''}>Music</StyledLink>
-          <StyledLink to={''}>Discography</StyledLink>
+          <StyledLink to={'discography'}>Discography</StyledLink>
           <StyledLink to={'about'}>About</StyledLink>
         </Box>
       </StyledHeader>
