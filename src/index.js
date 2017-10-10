@@ -25,7 +25,7 @@ injectGlobal`
     transition: all .2s ease;
 
     &:hover {
-      color: #77c241;
+      color: #ccc;
     }
   }
 `

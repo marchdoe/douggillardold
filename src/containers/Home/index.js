@@ -19,11 +19,7 @@ const Hero = styled.div`
 `
 
 const MusicEmbed = styled.div`
-  min-height: 150px;
-  padding-top: 75px;
-  margin-top: 20px;
-  text-transform: uppercase;
-  color: ${color.gray6};
+  padding-top: 20px;
   background-color: ${color.gray1};
 `
 
@@ -32,7 +28,11 @@ const StyledSection = styled(Box)`
 `
 
 const StyledHeading = styled(Heading)`
-  color: ${color.gray7};
+  color: ${color.gray8};
+`
+
+const StyledIframe = styled.iframe`
+  border: 0;
 `
 
 class Home extends Component {
@@ -53,20 +53,24 @@ class Home extends Component {
           <Text>FRI 10.13.17 - Durham, NC - Motorco Music Hall</Text>
           <Text>SAT 10.14.17 - Columbia, SC - The Jam Room Music Festival</Text>
 
-          <Link>View all</Link>
+          <Link to={'shows'}>View all Shows</Link>
         </StyledSection>
 
-        <StyledSection py={3} is='section'>
+        <StyledSection pt={3} is='section'>
           <StyledHeading f={4} is={'h2'}>
             Music
           </StyledHeading>
 
           <Text>Info about latest album</Text>
 
-          <Link>View discography</Link>
+          <Link to={'discography'}>Discography</Link>
 
           <MusicEmbed>
-            put music embed here
+            <StyledIframe src="http://bandcamp.com/EmbeddedPlayer/album=1476894231/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/t=1/transparent=true/" seamless>
+              <a href="http://douggillard.bandcamp.com/album/parade-on">
+                Parade On by doug gillard
+              </a>
+            </StyledIframe>
           </MusicEmbed>
         </StyledSection>
 
@@ -77,7 +81,7 @@ class Home extends Component {
 
           <Text>Short bio, links to about us page</Text>
 
-          <Link>View discography</Link>
+          <Link to={'about'}>About</Link>
         </StyledSection>
       </Wrapper>
     )

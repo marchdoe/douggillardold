@@ -20,11 +20,12 @@ class Header extends Component {
     return (
       <StyledHeader is='header'>
         <Box pl={3} py={4}>
-          <StyledLink to={'shows'}>Doug Gillard</StyledLink>
+          <StyledLink to={'/'}>Doug Gillard</StyledLink>
         </Box>
         <Box pr={3} py={4} ml='auto'>
           <StyledLink to={'shows'}>Upcoming Shows</StyledLink>
           <StyledLink to={'discography'}>Discography</StyledLink>
+          <StyledLink to={'media'}>Media</StyledLink>
           <StyledLink to={'about'}>About</StyledLink>
         </Box>
       </StyledHeader>
