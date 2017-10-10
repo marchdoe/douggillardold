@@ -19,7 +19,7 @@ const Hero = styled.div`
 `
 
 const MusicEmbed = styled.div`
-  padding-top: 20px;
+  padding-top: 30px;
   background-color: ${color.gray1};
 `
 
