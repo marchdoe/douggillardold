@@ -70,8 +70,8 @@ class Home extends Component {
           {/* <Text>Info about latest album</Text> */}
 
           <MusicEmbed>
-            <StyledIframe src="http://bandcamp.com/EmbeddedPlayer/album=1476894231/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/t=1/transparent=true/" seamless>
-              <a href="http://douggillard.bandcamp.com/album/parade-on">
+            <StyledIframe src="//bandcamp.com/EmbeddedPlayer/album=1476894231/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/t=1/transparent=true/" seamless>
+              <a href="//douggillard.bandcamp.com/album/parade-on">
                 Parade On by doug gillard
               </a>
             </StyledIframe>
