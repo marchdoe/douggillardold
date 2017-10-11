@@ -6,7 +6,6 @@ import { fetchShows } from '../../actions/index'
 import { Box, Text } from 'rebass'
 
 const StyledText = styled(Text)`
-  text-align: left;
   font-size: 13px;
 `
 
