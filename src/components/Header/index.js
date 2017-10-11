@@ -13,21 +13,22 @@ const StyledHeader = styled(Flex)`
 const StyledLink = styled(Link)`
   padding-left: 1rem;
   padding-right: 1rem;
+  font-size: 1.5rem;
 `
 
 class Header extends Component {
   render () {
     return (
       <StyledHeader is='header'>
-        <Box pl={3} py={4}>
+        <Box py={4}>
           <StyledLink to={'/'}>Doug Gillard</StyledLink>
         </Box>
-        <Box pr={3} py={4} ml='auto'>
+        {/* <Box pr={3} py={4} ml='auto'>
           <StyledLink to={'shows'}>Upcoming Shows</StyledLink>
           <StyledLink to={'discography'}>Discography</StyledLink>
           <StyledLink to={'media'}>Media</StyledLink>
           <StyledLink to={'about'}>About</StyledLink>
-        </Box>
+        </Box> */}
       </StyledHeader>
     )
   }
