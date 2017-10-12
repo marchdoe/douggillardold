@@ -7,6 +7,7 @@ import { Box, Text } from 'rebass'
 
 const StyledText = styled(Text)`
   font-size: 13px;
+  margin-bottom: 8px;
 `
 
 class ShowsList extends Component {
@@ -15,10 +16,12 @@ class ShowsList extends Component {
   }
 
   renderShows () {
-    return this.props.shows.map((show, index) => {
+    return this.props.shows.sort((a, b) => a.fields.date2 > b.fields.date2).map((show, index) => {
       return (
         <StyledText key={show.sys.id}>
-          {show.fields.date} - {show.fields.location} ::  {show.fields.venue}
+          {show.fields.date} -
+          {show.fields.location}
+          <a href={show.fields.venueWebsite}> {show.fields.venue}</a>
         </StyledText>
       )
     })

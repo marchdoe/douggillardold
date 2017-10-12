@@ -5,8 +5,7 @@ import { fetchShows } from '../../actions/index'
 
 import {
   Box,
-  Heading,
-  Link } from 'rebass'
+  Heading } from 'rebass'
 
 import { color } from '../../theme'
 
@@ -36,9 +35,9 @@ class Shows extends Component {
       return (
         <StyledArticle pr={5} py={4} key={show.sys.id}>
           <StyledHeading f={4} is={'h2'}>
-            <Link href="#">
-              {show.fields.date} - {show.fields.location} ::  {show.fields.venue}
-            </Link>
+            {show.fields.date} -
+            {show.fields.location} ::
+            <a href={show.fields.venue}>{show.fields.venue}</a>
             <p>{show.fields.additionalInfo}</p>
           </StyledHeading>
         </StyledArticle>

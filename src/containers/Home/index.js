@@ -17,9 +17,17 @@ const Wrapper = styled.div`
 
 const Hero = styled.div`
   text-align: center;
-  min-height: 300px;
-  background: url(${HeroImgSrc}) no-repeat left top;
+  min-height: 200px;
+  background: url(${HeroImgSrc}) no-repeat left center;
   background-size: cover;
+
+  @media (min-width: 40em) {
+    min-height: 325px;
+  }
+
+  @media (min-width: 64em) {
+    min-height: 450px;
+  }
 `
 
 const MusicEmbed = styled.div`
